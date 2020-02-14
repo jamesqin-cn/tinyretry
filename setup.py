@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = "tinyretry",
-    version = "0.1.0",
+    version = "0.1.1",
     author = "jamesqin",
     author_email = "jamesqin@vip.qq.com",
     description = "tinyretry is a python module that provides failure retry encapsulation for the target function",
@@ -23,5 +23,7 @@ setup(
         "Programming Language :: Python",
         "Programming Language :: Python :: 2",
         "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.7",
     ],
 )

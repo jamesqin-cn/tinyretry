@@ -1,14 +1,23 @@
-# TinyRetry
+# Tiny Retry
 
-## What is tiny_retry?
+## What is TinyRetry?
 tinyretry is a python module that provides failure retry encapsulation for the target function
 
-## Example
+## Programming Language
+- python 2.7
+- python 3.7
+
+## Install
+```
+pip install tinyretry 
+```
+
+## Quick Start
 use python decorators syntax to wrap the call target
 ```
-from tinyretry.tinyretry import UntilRetryForJson
+from tinyretry import UntilRetryForJson
 
-@UntilRetryForJson(retry_code_key='errno', expected_err_code='0', max_retry_num = 10, retry_interval_sec = 0.1)
+@UntilRetryForJson(retry_code_key='errno', expected_err_code='0', max_retry_num = 10, retry_interval_sec = 1)
 def DoHttpRequest():
     errno = random.randint(0,1)
     errmsg_arr = ['ok', 'err']
@@ -18,7 +27,7 @@ def DoHttpRequest():
     }
 ```
 
-## Retry type
+## Retry Type
 - for json response
     - UntilRetryForJson
     - WhileRetryForJson

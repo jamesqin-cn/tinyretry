@@ -1,4 +1,6 @@
 cache
 dist
+tinyretry.egg-info/
 .vscode
-*/*.pyc
+*.pyc
+__pycache_

@@ -4,7 +4,7 @@ __author__ = 'james'
 import unittest
 import logging
 import random
-from tinyretry.tinyretry import *
+from tinyretry import *
 
 @UntilRetryForJson(retry_code_key='errno', expected_err_code='0', max_retry_num = 10, retry_interval_sec = 0.1)
 def DoHttpRequest():
